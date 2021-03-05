@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="robots" content="noindex">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Midigator | Demo Application</title>
+
+	<!-- Global stylesheets -->
+	<link href="https://fonts.googleapis.com/css?family=Open Sans:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+	<link href="global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/custom.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/layout.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/colors.min.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/bootstrap-drawer.css" rel="stylesheet" type="text/css">
+	<script src="https://kit.fontawesome.com/42693d9212.js" crossorigin="anonymous"></script>
+	<!-- /global stylesheets -->
+
+	<!-- Core JS files -->
+	<script src="global_assets/js/main/jquery.min.js"></script>
+	<script src="global_assets/js/main/bootstrap.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/loaders/blockui.min.js"></script>
+	<!-- /core JS files -->
+
+	<!-- Theme JS files -->
+	<script src="global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="global_assets/js/plugins/tables/datatables/extensions/jszip/jszip.min.js"></script>
+	<script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/pdfmake.min.js"></script>
+	<script src="global_assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+	<script src="global_assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+	<script src="global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<script src="global_assets/js/plugins/forms/inputs/inputmask.js"></script>
+	<script src="global_assets/js/plugins/forms/validation/validate.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="global_assets/js/plugins/extensions/jquery_ui/widgets.min.js"></script>
+	<script src="global_assets/js/plugins/extensions/jquery_ui/effects.min.js"></script>
+	<script src="global_assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script src="global_assets/js/plugins/pickers/anytime.min.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script src="global_assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script src="global_assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/select2.min.js"></script>
+	<script src="global_assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+	<script src="global_assets/js/plugins/forms/tags/tagsinput.min.js"></script>
+	<script src="global_assets/js/plugins/forms/tags/tokenfield.min.js"></script>
+	<script src="global_assets/js/plugins/forms/inputs/typeahead/typeahead.bundle.min.js"></script>
+	<script src="global_assets/js/plugins/ui/prism.min.js"></script>
+
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/preview-site.js"></script>
+	<script src="assets/js/pages/layout_fixed_custom.js"></script>
+	<script src="assets/js/drawer.js"></script>
+
+	<link rel="icon" href="https://midigator.com/wp-content/uploads/2018/08/midi-favicon.png" sizes="32x32" />
+	<link rel="icon" href="https://midigator.com/wp-content/uploads/2018/08/midi-favicon.png" sizes="192x192" />
+
+	<style>
+		a {
+			color: #afd25c;
+			font-weight: 600;
+		}
+
+		a:hover {
+			color: #afd25c;
+			text-decoration: underline;
+		}
+
+		.navbar-light .navbar-nav-link {
+			font-weight: 400;
+		}
+
+		.navbar-light .navbar-nav-link:hover {
+			text-decoration: none;
+		}
+	</style>
+
+
+	<!-- /theme JS files -->
+</head>
+
+<body class="navbar-top sidebar-xs">
+
+	<!-- Main navbar -->
+	<div class="navbar navbar-expand-md navbar-light fixed-top">
+		<div class="navbar-brand">
+			<a href="../app/index.html" class="d-inline-block">
+				<img src="https://app.midigator.com/build/images/midigator/themes/midigator/logo-4b48f83147.png" alt=""> 
+			</a>
+		</div>
+
+		<div class="d-md-none">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+				<i class="icon-tree5"></i>
+			</button>
+			<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+				<i class="icon-paragraph-justify3"></i>
+			</button>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-mobile">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<div class="form-group cid-select">
+						<select data-placeholder="Select a company"class="form-control select-search" data-fouc>
+							<option></option>
+							<option selected value="not-refunded">(22) Fresh Flowers</option>
+							<option value="not-refunded">(87) Vandalay Industries</option>
+							<option value="not-refunded">(122) Nighthawk LLC</option>
+							<option value="full-refund">(231) Persimmon Enterprise</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item dropdown mr-3">
+					<a href="#" class="feedback-button navbar-nav-link d-flex align-items-center" data-toggle="dropdown">
+						<span class="font-weight-semibold"><i class="far fa-bullhorn mr-2"></i>Feedback about this page?</span>
+					</a>
+					<div class="feedback-dropdown dropdown-menu dropdown-menu-right">
+						<div class="form-group mb-2">
+							<textarea rows="5" cols="5" class="form-control" placeholder="Tell us your feedback about this page..."></textarea>
+						</div>
+						<div style="float: right">
+							<a href="#" class="btn btn-medium btn-link">Cancel</a>
+							<a href="#" id="noty_feedback_submit" class="btn btn-medium btn-midi">Submit</a>
+						</div>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown dropdown-user mt-1">
+					<a href="#" class="global-hamburger navbar-nav-link d-flex align-items-center" data-toggle="dropdown">
+						<span><i class="fas fa-bars icon-lg"></i></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="settings" class="dropdown-item"><i class="fas fa-user mr-2"></i> My Profile</a>
+						<a href="settings/users.html" class="dropdown-item"><i class="far fa-building mr-2"></i> Company settings</a>
+						<div class="dropdown-divider"></div>
+						<a href="../index.html" class="dropdown-item"><i class="fas fa-sign-out mr-2"></i> Logout</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- /main navbar -->
+
+	
+
+
+	<!-- Page content -->
+	<div class="page-content">
+
+		<!-- Main sidebar -->
+		<div class="sidebar sidebar-dark sidebar-main sidebar-fixed sidebar-expand-md">
+
+			<!-- Sidebar mobile toggler -->
+			<div class="sidebar-mobile-toggler text-center">
+				<a href="#" class="sidebar-mobile-main-toggle">
+					<i class="icon-arrow-left8"></i>
+				</a>
+				Navigation
+				<a href="#" class="sidebar-mobile-expand">
+					<i class="icon-screen-full"></i>
+					<i class="icon-screen-normal"></i>
+				</a>
+			</div>
+			<!-- /sidebar mobile toggler -->
+
+
+			<!-- Sidebar content -->
+			<div class="sidebar-content">
+
+
+				<!-- Main navigation -->
+				<div class="card card-sidebar-mobile">
+					<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+						<!-- Main -->
+						<!-- <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li> -->
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">
+								<i class="fas fa-tachometer-alt-fast icon-md"></i>
+								<span class="ml-3">Dashboard</span>
+							</a>
+						</li>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link active"><i class="fas fa-chart-bar icon-md"></i> <span class="ml-3">Analytics</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Form components">
+								<li class="nav-item"><a href="analytics-chargebacks.html" class="nav-link"><i class="icon-coin-dollar"></i> <span>Chargebacks</span></a></li>
+								<li class="nav-item active"><a href="analytics-prevention.html" class="nav-link"><i class="icon-shield2"></i> <span>Prevention</span></a></li>
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="fas fa-book icon-md"></i> <span class="ml-3">Manager</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Form components">
+								<li class="nav-item"><a href="manager-chargebacks.html" class="nav-link"><i class="icon-coin-dollar"></i> <span>Chargebacks</span></a></li>
+								<!-- <li class="nav-item"><a href="manager-prevention.html" class="nav-link"><i class="icon-shield2"></i> <span>Prevention</span></a></li> -->
+							</ul>
+						</li>
+
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="fas fa-random icon-md"></i> <span class="ml-3">Workflows</span></a>
+							<ul class="nav nav-group-sub" data-submenu-title="Form components">
+								<li class="nav-item"><a href="disputeflow" class="nav-link"><i class="icon-coin-dollar"></i> <span>DisputeFlow</span></span></a></li>
+								<li class="nav-item"><a href="preventflow" class="nav-link"><i class="icon-shield2"></i> <span>PreventFlow</span></span></a></li>
+							</ul>
+						</li>
+						
+						<li class="nav-item">
+							<a href="accounts.html" class="nav-link">
+								<i class="fas fa-university icon-md"></i>
+								<span class="ml-3">Accounts</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#drawernotifications" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawernotifications" class="nav-link">
+								<i class="fas fa-exclamation-circle icon-md"></i>
+								<span class="ml-3">Notifications</span>
+							</a>
+						</li>
+						<!-- /main -->
+
+					</ul>
+				</div>
+				<!-- /main navigation -->
+
+			</div>
+			<!-- /sidebar content -->
+			
+		</div>
+		<!-- /main sidebar -->
+
+
+		<!-- Main content -->
+		<div class="content-wrapper">
+
+			<!-- Page header -->
+			<div class="page-header page-header-light bg-transparent border-0">
+				<div class="page-header-content header-elements-md-inline manager">
+					<div class="page-title d-flex">
+						<h1><span class="font-weight-semibold"><strong>Chargeback Analytics</strong></span></h1>
+						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+					</div>
+
+					<div class="header-elements d-none">
+						<div class="d-flex justify-content-center pt-4 pr-3">
+							<a href="#drawerstats" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawerstats" class="btn btn-medium btn-default drawer-trans"><i class="fas fa-chart-pie mr-2"></i>View Breakdown</a>
+						</div>
+						<div class="form-group mt-4">
+							<button type="button" class="btn btn-light date-picker-midi daterange-predefined">
+								<i class="icon-calendar22 mr-2"></i>
+								<span></span>
+							</button>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- /page header -->
+
+
+			<!-- Content area -->
+			<div class="content">
+				
+				<div class="row d-flex">
+					<!-- Variable analytics 1 -->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter1" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter1" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter1" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+							<div class="form-group d-inline-block w-200 chart-picker">
+								<select id="chart-select" class="form-control select" data-fouc>
+									<option value="1">Marketing source</option>
+									<option value="2" >Top 10 reason codes</option>
+									<option value="3">Subscription cycle</option>
+									<option value="4">Top 10 price points</option>
+									<option value="5">Country</option>
+									<option value="6">Product</option>
+									<option value="7">Top 10 BIN</option>
+									<option value="8">Lag time</option>
+								</select>
+							</div>
+						</div>
+						<!-- Marketing source -->
+						<div id="marketingsource" class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Marketing source</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Marketing source can help tracing chargebacks to an individual affiliate or traffic source"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/XEg-A8Uhq/" title="Chart: Disputes by Marketing Source" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end marketing source -->
+
+						<!-- Reason codes source -->
+						<div id="reasoncodes" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Reason code</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Reason code monitors reason code trends"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/i9-CrpGw/" title="Chart: " style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end reason codes -->
+
+						<!-- Rebill cycle source -->
+						<div id="rebillcycle" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Subscription cycle</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Subscription cycle can help pinpoint which cycles generate the most chargebacks and why"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/H_x5nRySj/" title="Chart: Disputes by Subscription Cycle" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end rebill cycle -->
+
+						<!-- Price point -->
+						<div id="pricepoint" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Price point</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Price point helps finding the price point 'sweet spot' by understanding what prices can trigger higher chargebacks"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/OjNec_58/" title="Chart: Top 10 Price Points" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end price point -->
+
+						<!-- Country-->
+						<div id="country" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Country</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Country monitors trends and compare dispute data by each country"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/GhQLfeBlR/" title="Chart: Disputes by Country" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end country -->
+
+						<!-- Product-->
+						<div id="product" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Product</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Product yype informs on which products might be causing chargeback issues and why"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/AWSFCmeAw/" title="Chart: Disputes by Product Type" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end product -->
+
+						<!-- BIN -->
+						<div id="bin" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by BIN</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="BIN can help identify problematic BINs and allow you to make adjustments to reduce chargebacks"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/D9PRrDgyN/" title="Chart: Disputes by BIN" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end BIN -->
+
+						<!-- Lag time -->
+						<div id="lagtime" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Dispute Lag time</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Dispute lag time shows how many days elapse from the point in time when a transaction occurs and the corresponding chargeback is received. For the purpose of maintaining a high level of readability, the chart does not show values past 120 days"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/TZhgD786Z/" title="Chart: Untitled Chart" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end Lag time -->
+					</div>
+					<!-- end variable analytics 1 -->
+
+					<!-- Variable analytics 2 -->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter2" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter2" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter2" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+							<div class="form-group d-inline-block w-200 chart-picker">
+								<select id="chart-select2" class="form-control select" data-fouc>
+									<option value="1">Marketing source</option>
+									<option value="2" >Top 10 reason codes</option>
+									<option selected value="3">Subscription cycle</option>
+									<option value="4">Top 10 price points</option>
+									<option value="5">Country</option>
+									<option value="6">Product</option>
+									<option value="7">Top 10 BIN</option>
+									<option value="8">Lag time</option>
+								</select>
+							</div>
+						</div>
+						<!-- Marketing source -->
+						<div id="marketingsource2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Marketing source</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Marketing source can help tracing chargebacks to an individual affiliate or traffic source"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/XEg-A8Uhq/" title="Chart: Disputes by Marketing Source" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end marketing source -->
+
+						<!-- Reason codes source -->
+						<div id="reasoncodes2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Reason code</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Reason code monitors reason code trends"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/i9-CrpGw/" title="Chart: " style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end reason codes -->
+
+						<!-- Rebill cycle source -->
+						<div id="rebillcycle2" class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Subscription cycle</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Subscription cycle can help pinpoint which cycles generate the most chargebacks and why"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/H_x5nRySj/" title="Chart: Disputes by Subscription Cycle" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end rebill cycle -->
+
+						<!-- Price point -->
+						<div id="pricepoint2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Price point</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Price point helps finding the price point 'sweet spot' by understanding what prices can trigger higher chargebacks"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/OjNec_58/" title="Chart: Top 10 Price Points" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end price point -->
+
+						<!-- Country-->
+						<div id="country2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Country</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Country monitors trends and compare dispute data by each country"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/GhQLfeBlR/" title="Chart: Disputes by Country" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end country -->
+
+						<!-- Product-->
+						<div id="product2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by Product</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Product type informs on which products might be causing chargeback issues and why"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/AWSFCmeAw/" title="Chart: Disputes by Product Type" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end product -->
+
+						<!-- BIN -->
+						<div id="bin2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Disputes by BIN</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="BIN can help identify problematic BINs and allow you to make adjustments to reduce chargebacks"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/D9PRrDgyN/" title="Chart: Disputes by BIN" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end BIN -->
+
+						<!-- Lag time -->
+						<div id="lagtime2" class="card" style="display: none;">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Dispute Lag time</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Dispute lag time shows how many days elapse from the point in time when a transaction occurs and the corresponding chargeback is received. For the purpose of maintaining a high level of readability, the chart does not show values past 120 days"></a></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/TZhgD786Z/" title="Chart: Untitled Chart" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+						<!-- end Lag time -->
+					</div>
+					<!-- end variable analytics 2 -->
+				</div>
+
+				<div class="row d-flex">
+					<!-- Chargeback count -->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter3" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter3" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter3" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Dispute count</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="This chart shows your month-to-date chargeback counts for the selected date range. You can view your total counts or break down data by card brand."></a></h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<!-- <div class="btn-group justify-content-center">
+											<a href="#" class="btn btn-text dropdown-toggle" data-toggle="dropdown">Marketing source</a>
+											<div class="dropdown-menu">
+												<a href="#" class="dropdown-item">Top 10 reason codes</a>
+												<a href="#" class="dropdown-item">Rebill cycle</a>
+												<a href="#" class="dropdown-item">Top 10 price points</a>
+												<a href="#" class="dropdown-item">Country</a>
+												<a href="#" class="dropdown-item">Product</a>
+												<a href="#" class="dropdown-item">Top 10 BIN</a>
+												<a href="#" class="dropdown-item">Lag time</a>
+											</div>
+										</div> -->
+				                	</div>
+			                	</div>
+							</div>
+							<div class="card-body border-top-danger">
+								<div id="highcharts-dCWnI7Ibt"><script src="https://app.everviz.com/inject/dCWnI7Ibt/" defer="defer"></script></div>
+							</div>
+						</div>
+					</div>
+					<!-- end chargeback count -->
+					<!-- Chargeback ratio -->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter4" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter4" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter4" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Dispute ratio</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="This chart shows your ratio of disputes to transactions (count) and your ratio of dispute value to transaction value (amount). You can view all activity or break down the data by card brand."></a></h5>
+								<div class="header-elements">
+									<div class="list-icons">
+				                		<div class="btn-group justify-content-center">
+											<a href="#" class="btn btn-text dropdown-toggle" data-toggle="dropdown">Total</a>
+											<div class="dropdown-menu">
+												<a href="#" class="dropdown-item">Visa</a>
+												<a href="#" class="dropdown-item">Mastercard</a>
+												<a href="#" class="dropdown-item">Discover</a>
+												<a href="#" class="dropdown-item">Amex</a>
+											</div>
+										</div>
+				                	</div>
+			                	</div>
+							</div>
+							<div class="card-body border-top-danger">
+								<div id="highcharts-DwSIlRE15"><script src="https://app.everviz.com/inject/DwSIlRE15/" defer="defer"></script></div>
+							</div>
+						</div>
+					</div>
+					<!-- end chargeback ratio -->
+				</div>
+
+				<div class="row d-flex">
+					<!-- Forecast -->
+					<div class="col-xl-12 col-lg-12">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter5" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter5" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter5" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>This Month's Forecast</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="This chart anticipates your end-of-month dispute counts. Please note that this prediction is always for the current month regardless of the date range selected."></a></h5>
+								<div class="header-elements">
+									<!-- <div class="list-icons">
+										<a href="#" class="btn active rounded">Daily</a>
+										<a href="#" class="btn disabled">Monthly</a>
+				                		<a class="list-icons-item" data-action="collapse"></a>
+				                	</div> -->
+			                	</div>
+							</div>
+							<div class="card-body d-flex justify-content-around">
+								<div class="stats text-center">
+									<p class="text-forecast-stat">137</p>
+									<p class="text-t100">Total count</p>
+								</div>
+								<div class="border-right-1 border-muted"></div>
+								<div class="stats text-center">
+									<p class="text-forecast-stat">59</p>
+									<p class="text-t100">Visa</p>
+								</div>
+								<div class="border-right-1 border-muted"></div>
+								<div class="stats text-center">
+									<p class="text-forecast-stat">48</p>
+									<p class="text-t100">Mastercard</p>
+								</div>
+								<div class="border-right-1 border-muted"></div>
+								<div class="stats text-center">
+									<p class="text-forecast-stat">18</p>
+									<p class="text-t100">Discover</p>
+								</div>
+								<div class="border-right-1 border-muted"></div>
+								<div class="stats text-center">
+									<p class="text-forecast-stat">12</p>
+									<p class="text-t100">Amex</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end forecast -->
+				</div>
+
+				<div class="row d-flex">
+					<!-- Historical performance -->
+					<div class="col-xl-12 col-lg-12">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter6" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter6" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter6" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Historical performance</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="This is a look at your performance over the past year. Use this graph to see peaks, trends and improvements in your chargeback history over time."></a></h5>
+								<div class="header-elements">
+									<!-- <div class="list-icons">
+										<a href="#" class="btn active rounded">Daily</a>
+										<a href="#" class="btn disabled">Monthly</a>
+				                		<a class="list-icons-item" data-action="collapse"></a>
+				                	</div> -->
+			                	</div>
+							</div>
+							<div class="card-body border-top-danger">
+								<div id="highcharts-0agqB3C00"><script src="https://app.everviz.com/inject/0agqB3C00/" defer="defer"></script></div>
+							</div>
+						</div>
+					</div>
+					<!-- end historical performance -->
+				</div>
+
+				<div class="row d-flex">
+					<!-- Representment results -->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter7" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter7" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter7" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Representment results</strong></h5>
+							</div>
+							<div class="card-body border-top-danger">
+								<div class="row">
+									<div class="col-md-6">
+										<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/-qmF_hBru/" title="Chart: Representment results" style="border: 0; width: 100%; height: 320px"></iframe>
+									</div>
+									<div class="col-md-6">
+										<table class="win-rate-table table-striped">
+											<thead>
+												<th></th>
+												<th>Lifetime</th>
+												<th>Date range</th>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="font-weight-semibold" style="text-align: right;">Win rate<a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Win rate is the most basic metric used to monitor outcomes. It looks at the number of cases won versus the number of cases lost. This is the purest reflection of your success rate. Win Rate = Chargebacks Won / (Won + Lost)"></a></td>
+													<td>74.34%</td>
+													<td>76.21%</td>
+												</tr>
+												<tr>
+													<td class="font-weight-semibold" style="text-align: right;">Win rate+<a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Win rate+ compares cases that were won against cases that were either lost or went to pre-arbitration. This can be used to estimate the amount of money you'll win back since you won't recover revenue if the case advances to pre-arbitration. Win Rate+ = Chargebacks Won / (Won + Lost + Pre-Arbitration)"></a></td>
+													<td>68.12%</td>
+													<td>69.35%</td>
+												</tr>
+												<tr>
+													<td class="font-weight-semibold" style="text-align: right;">Win rate++<a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Win rate++ compares cases that were won against all other outcomes. This is the most comprehensive metric and reflects every possible outcome. However, it isn't the best way to evaluate the effectiveness of your chargeback responses. Win Rate++ = Chargebacks Won / (Won + Lost + Pre-Arbitration + Did Not Fight)"></a></td>
+													<td>52.73%</td>
+													<td>54.16%</td>
+												</tr>
+												<tr>
+													<td class="font-weight-semibold" style="text-align: right;">Won revenue<a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Won revenue is the total amount of money recovered. This metric can help you gauge and optimize the ROI of your chargeback management strategy."></a></td>
+													<td>$115,234.56</td>
+													<td>$34,232.87</td>
+												</tr>
+												<tr>
+													<td class="font-weight-semibold" style="text-align: right;">Pending win revenue<a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="left" data-html="true" data-trigger="hover" data-content="Pending win revenue is the anticipated amount of money that could be recovered by winning chargebacks that are still in the pending stage. Pending Win Revenue = Sum (Value of Pending Cases ) * Lifetime Win Rate"></a></td>
+													<td>$3,345.61</td>
+													<td>$732.91</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+									
+
+							</div>
+						</div>
+					</div>
+					<!-- end Representment results -->
+					<!-- Prevention coverage-->
+					<div class="col-xl-6 col-lg-6">
+						<div class="mb-0">
+							<div class="form-group d-inline-block width-150">
+								<select id="chartfilter8" data-placeholder="Select some MIDs"class="form-control select" data-fouc>
+									<option></option>
+									<option selected value="1">Entire portfolio</option>
+									<option value="2">MID</option>
+									<option value="3">Processor</option>
+								</select>
+							</div>
+							<div id="midfilter8" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">772773893993</option>
+									<option value="2">772993900001</option>
+									<option value="3">883883993993</option>
+									<option value="4">773778389984</option>
+									<option value="5">667277327773</option>
+									<option value="6">288283773773</option>
+								</select>
+							</div>
+
+							<div id="processorfilter8" class="form-group width-250 chart-acct-filter" style="display: none;">
+								<select data-placeholder="Select processor(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+									<option value="1">Alto Global</option>
+									<option value="2">Worldpay</option>
+									<option value="3">Priority Payments</option>
+									<option value="4">EVO</option>
+									<option value="5">F1 Payments</option>
+									<option value="6">First Data</option>
+									<option value="6">Humbolt</option>
+									<option value="6">Paysafe</option>
+									<option value="6">Vantiv</option>
+									<option value="6">Stripe</option>
+									<option value="6">NMA</option>
+								</select>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h5 class="card-title"><strong>Prevention coverage</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="This pie chart shows the percent of disputes that were resolved compared to the percent that turned into chargebacks. Monthly prevention efforts are broken down by prevention case type and can help you monitor the effectiveness of each strategy"></a></h5>
+								
+							</div>
+							<div class="card-body border-top-danger">
+								<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/MxHpqmbMS/" title="Chart: Prevention Coverage - CB Analytics" style="border: 0; width: 100%; height: 320px"></iframe>
+							</div>
+						</div>
+					</div>
+					<!-- end Prevention coverage -->
+				</div>
+
+
+
+			</div>
+			<!-- /content area -->
+
+
+			<!-- Footer -->
+			<div class="navbar navbar-expand-lg navbar-light">
+				<div class="text-center d-lg-none w-100">
+					<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+						<i class="icon-unfold mr-2"></i>
+						Footer
+					</button>
+				</div>
+
+				<div class="navbar-collapse collapse" id="navbar-footer">
+					<span class="navbar-text">
+						&copy; 2021 Midigator, LLC
+					</span>
+
+				</div>
+			</div>
+			<!-- /footer -->
+
+		</div>
+		<!-- /main content -->
+
+	</div>
+	<!-- /page content -->
+
+	<!-- MODALS -->
+
+	<!-- Add Notification -->
+		<div id="add-notification-modal" class="modal fade" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title font-weight-semibold">Add New Notification</h3>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+
+						<div class="modal-body">
+							<div class="form-group">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label class="form-group mb-1">Notification name</label>
+											<input type="text" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="form-group mb-1">Filter by MID</label>
+												<select data-placeholder="Select MID(s)" class="form-control multiselect-filtering" multiple="multiple" data-fouc>
+												<option value="1">772773893993</option>
+												<option value="2">772993900001</option>
+												<option value="3">883883993993</option>
+												<option value="4">773778389984</option>
+												<option value="5">667277327773</option>
+												<option value="6">288283773773</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row mt-3">
+									<div class="col-md-5">
+										<div class="form-group">
+											<label class="form-group mb-1">If</label>
+												<select data-placeholder="Select MID(s)" class="form-control select-search" data-fouc>
+												<option value="2">Amex dispute count</option>
+												<option value="3">Amex dispute ratio</option>
+												<option value="4">Amex transaction count</option>
+												<option value="5">Dispute count (all)</option>
+												<option value="6">Dispute ratio (all)</option>
+												<option value="7">Dispute $ amount (all)</option>
+												<option value="8">Dispute $ ratio (all)</option>
+												<option value="9">Discover dispute count</option>
+												<option value="10">Discover dispute ratio</option>
+												<option value="11">Discover transaction count</option>
+												<option value="12">Mastercard dispute count</option>
+												<option value="13">Mastercard dispute ratio</option>
+												<option value="14">Mastercard transaction count</option>
+												<option value="15">Mastercard last month's transaction count</option>
+												<option value="16">Total sales</option>
+												<option value="17">Transaction count (all)</option>
+												<option value="18">Visa dispute count</option>
+												<option value="19">Visa dispute ratio</option>
+												<option value="20">Visa transaction count</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label class="form-group mb-1">Is</label>
+												<select data-placeholder="Select MID(s)" class="form-control select-search" data-fouc>
+												<option value="1">Greater than</option>
+												<option value="2">Greater than or equal to</option>
+												<option value="3">Less than</option>
+												<option value="4">Less than or equal to</option>
+												<option value="5">Equal to</option>
+												<option value="6">Not equal to</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="form-group mb-1">Value</label>
+											<input type="number" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row mt-3">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label>Send email to</label>
+											<input type="text" class="form-control tokenfield" placeholder="Email..." value="" data-fouc>
+										</div>
+										<label class="d-block font-weight-semibold mb-2">Dashboard highlight color</label>
+										<ul class="nav nav-pills nav-pills-bordered">
+											<li class="nav-item">
+												<a href="#7" class="nav-link active text-center" data-toggle="tab">
+													<div class=""><i class="fal fa-ban thirtythirty"></i></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#1" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-1"></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#2" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-2"></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#3" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-3"></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#4" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-4"></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#5" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-5"></div>
+												</a>
+											</li>
+											<li class="nav-item">
+												<a href="#6" class="nav-link text-center" data-toggle="tab">
+													<div class="color-circle-6"></div>
+												</a>
+											</li>
+										</ul>
+										<div class="form-group">
+											<label class="form-group mb-1">Email notifications begin on this day of each month</label>
+											<input type="number" class="form-control">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+						<button type="button" id="noty_notification_created" class="btn bg-green-400" data-dismiss="modal">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Add notification -->
+
+	<!-- /MODALS -->
+
+				<!-- Drawers -->
+				<div id="drawerstats" class="drawer drawer-right dw-xs-10 dw-sm-6 dw-md-4 fold drawer-trans" aria-labelledby="drawerstats">
+			        <div class="drawer-controls">
+			            <a href="#drawerstats" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawerstatss"><i class="fal fa-times icon-lg text-grey-300 mt-4"></i></a>
+			        </div>
+			        <div class="drawer-contents">
+			            <div class="drawer-heading">
+			                <h2 class="drawer-title font-weight-semibold">Analytics Breakdown</h2>
+			                <div class="green-line"></div>
+			            </div>
+			            <div class="drawer-body mt-neg-30">
+							<div class="card card-body border-top-info no-shadow">
+								<div class="form-group d-inline-block w-200 chart-picker">
+									<label>Choose a chart</label>
+									<select id="chart-select3" class="form-control select" data-fouc>
+										<option value="1">Marketing source</option>
+										<option value="2" >Top 10 reason codes</option>
+										<option value="3">Subscription cycle</option>
+										<option value="4">Top 10 price points</option>
+										<option value="5">Country</option>
+										<option value="6">Product</option>
+										<option value="7">Top 10 BIN</option>
+										<option value="8">Lag time</option>
+									</select>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+					                    <!-- Marketing source -->
+										<div id="marketingsource3" class="card">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Marketing source</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Marketing source can help tracing chargebacks to an individual affiliate or traffic source"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/XEg-A8Uhq/" title="Chart: Disputes by Marketing Source" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Marketing source data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Marketing source</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>Google paid search</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>Google paid search</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>Google paid search</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>Google paid search</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>Google paid search</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>Facebook-Ad-1</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>Facebook-Ad-1</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>Facebook-Ad-1</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>Instagram-Ad-5</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>Instagram-Ad-5</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>Instagram-Ad-5</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end marketing source -->
+
+										<!-- Reason code -->
+										<div id="reasoncodes3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Reason code</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Reason code monitors reason code trends"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/i9-CrpGw/" title="Chart: " style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Reason code data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end reason code -->
+
+										<!-- Subscription cycle -->
+										<div id="rebillcycle3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Subscription cycle</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Subscription cycle can help pinpoint which cycles generate the most chargebacks and why"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/H_x5nRySj/" title="Chart: Disputes by Subscription Cycle" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Subscription cycle data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Subscription cycle</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>1</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>2</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>2</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>2</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>3</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>3</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>4</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>4</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>4</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>5</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>6</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end subscription cycle -->
+
+										<!-- Price point -->
+										<div id="pricepoint3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Price point</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Price point helps finding the price point 'sweet spot' by understanding what prices can trigger higher chargebacks"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/OjNec_58/" title="Chart: Top 10 Price Points" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Price point data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end price point -->
+
+										<!-- Country -->
+										<div id="country3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Country</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Country monitors trends and compare dispute data by each country"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/GhQLfeBlR/" title="Chart: Disputes by Country" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Country data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Country</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>US</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>US</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>US</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>UK</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>UK</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>US</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>GE</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>AU</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>AU</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>US</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>UK</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end country -->
+
+										<!-- Product -->
+										<div id="product3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by Product</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Product type informs on which products might be causing chargeback issues and why"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/AWSFCmeAw/" title="Chart: Disputes by Product Type" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Product data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Product</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>SKU-64666</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>SKU-64666</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>SKU-64666</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>SKU-73544</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>SKU-88365</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>SKU-88365</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>SKU-64666</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>SKU-77363</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>SKU-36648</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>SKU-36648</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>SKU-67329</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end product -->
+
+										<!-- BIN -->
+										<div id="bin3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Disputes by BIN</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="BIN can help identify problematic BINs and allow you to make adjustments to reduce chargebacks"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/D9PRrDgyN/" title="Chart: Disputes by BIN" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>BIN data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>BIN</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>56746 - Canada Trust</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>554675 - Capital One Bank</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>556213 - Halifax Bank</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>672387 - Bank of America (UK)</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>346789 - Lloyds Bank</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>283456 - Chase Bank (US)</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>283456 - Chase Bank (US)</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>283456 - Chase Bank (US)</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>672387 - Bank of America (UK)</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>672387 - Bank of America (UK)</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>554675 - Capital One Bank</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end BIN -->
+
+										<!-- Lag time -->
+										<div id="lagtime3" class="card" style="display: none;">
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Dispute Lag time</strong><a style="color:#a3a3a3;" class="icon-question4 font-size-xs pl-2" data-popup="popover" data-placement="right" data-html="true" data-trigger="hover" data-content="Dispute lag time shows how many days elapse from the point in time when a transaction occurs and the corresponding chargeback is received. For the purpose of maintaining a high level of readability, the chart does not show values past 120 days"></a></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<iframe class="highcharts-iframe" src="https://app.everviz.com/embed/TZhgD786Z/" title="Chart: Untitled Chart" style="border: 0; width: 100%; height: 320px"></iframe>
+											</div>
+
+											<div class="card-header header-elements-inline">
+												<h5 class="card-title"><strong>Lag time data</strong></h5>
+											</div>
+											<div class="card-body border-top-danger">
+												<table style="white-space: nowrap;" class="table datatable-button-html5-basic table-striped">
+													<thead>
+														<th>Chargeback case ID</th>
+														<th>Lag time</th>
+														<th>Transaction date</th>
+														<th>Received date</th>
+														<th>Dispute amount</th>
+														<th>Reason code</th>
+														<th>Reason description</th>
+														<th>Result</th>
+													</thead>
+													<tbody>
+														<tr>
+															<td>63663899839893</td>
+															<td>4 days</td>
+															<td>2021-01-11</td>
+															<td>2021-01-13</td>
+															<td>$29.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>838388378474</td>
+															<td>3 days</td>
+															<td>2021-01-12</td>
+															<td>2021-01-13</td>
+															<td>$42.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td>Did not fight</td>
+														</tr>
+														<tr>
+															<td>383883900940</td>
+															<td>14 days</td>
+															<td>2021-01-09</td>
+															<td>2021-01-10</td>
+															<td>$99.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>838384848483</td>
+															<td>6 days</td>
+															<td>2021-02-01</td>
+															<td>2021-02-13</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>4838403030034i</td>
+															<td>32 days</td>
+															<td>2021-02-04</td>
+															<td>2021-02-05</td>
+															<td>$89.99</td>
+															<td>10.4</td>
+															<td>Other Fraud - Card Absent Environment</td>
+															<td><span class="badge badge-pill bg-warning">Lost</span></td>
+														</tr>
+
+														<tr>
+															<td>388390303</td>
+															<td>6 days</td>
+															<td>2021-02-05</td>
+															<td>2021-02-07</td>
+															<td>$49.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>7 days</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$59.99</td>
+															<td>13.1</td>
+															<td>Merchandise/Services Not Received</td>
+															<td><span class="badge badge-pill bg-success">Won</span></td>
+														</tr>
+
+														<tr>
+															<td>27739932233</td>
+															<td>5 days</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$120.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Pre-arbitration</td>
+														</tr>
+
+														<tr>
+															<td>2773934994</td>
+															<td>13 days</td>
+															<td>2021-02-06</td>
+															<td>2021-02-07</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>3883949004</td>
+															<td>3 days</td>
+															<td>2021-02-11</td>
+															<td>2021-02-12</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+
+														<tr>
+															<td>388348949944</td>
+															<td>4 days</td>
+															<td>2021-02-08</td>
+															<td>2021-02-09</td>
+															<td>$9.99</td>
+															<td>4837</td>
+															<td>No Cardholder Authorization</td>
+															<td>Did not fight</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<!-- end lag time -->
+
+									</div>
+								</div>
+							</div>
+			            </div>
+			            
+			        </div>
+			    </div>
+
+			    <!-- Notifications drawer -->
+
+			    <div id="drawernotifications" class="drawer drawer-right dw-xs-10 dw-sm-6 dw-md-4 fold drawer-trans" aria-labelledby="drawernotifications">
+			        <div class="drawer-controls">
+			            <a href="#drawernotifications" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawernotifications"><i class="fal fa-times icon-lg text-grey-300 mt-4"></i></a>
+			        </div>
+			        <div class="drawer-contents">
+			            <div class="drawer-heading mt-3">
+			                <h2 class="drawer-title font-weight-semibold">Notifications & Reports</h2>
+			                <div class="green-line"></div>
+			            </div>
+			            <div class="drawer-body mt-neg-30">
+							<div class="card card-body border-top-info no-shadow">
+								<div class="row">
+									<div class="col-md-12">
+					                    <a data-toggle="modal" data-target="#add-notification-modal" class="btn btn-lg btn-midi">Add Notification</a>
+					                    <h5 class="mt-4 mb-3"><strong>Threshold notifications</strong></h5>
+					                    <table style="white-space: nowrap;" class="table-notifications table-striped">
+					                    	<thead>
+					                    		<th>Notification name</th>
+					                    		<th>Conditions</th>
+					                    		<th>Type</th>
+					                    		<th>Status</th>
+					                    		<th class="text-center">Actions</th>
+					                    	</thead>
+					                    	<tbody>
+					                    		<tr>
+					                    			<td>Chargebacks over 200</td>
+					                    			<td>Total CB count > 200</td>
+					                    			<td>Email</td>
+					                    			<td><span class="badge badge-pill bg-success">Active</span></td>
+					                    			<td class="text-center">
+					                    				<a href="#" class="btn btn-text"><i class="far fa-edit"></i></a>
+					                    				<a href="#" class="btn btn-text"><i class="far fa-trash-alt"></i></a>
+					                    			</td>
+					                    		</tr>
+					                    		<tr>
+					                    			<td>Chargeback ratio above 2%</td>
+					                    			<td>Total CB ratio > 0.2%</td>
+					                    			<td>Email</td>
+					                    			<td><span class="badge badge-pill bg-success">Active</span></td>
+					                    			<td class="text-center">
+					                    				<a href="#" class="btn btn-text"><i class="far fa-edit"></i></a>
+					                    				<a href="#" class="btn btn-text"><i class="far fa-trash-alt"></i></a>
+					                    			</td>
+					                    		</tr>
+					                    		<tr class="text-muted">
+					                    			<td>Vantiv MIDs chargeback ratio</td>
+					                    			<td>Total CB ratio > 0.1% for selected MIDs</td>
+					                    			<td>Email, Dashboard</td>
+					                    			<td><span class="badge badge-pill bg-grey-300">Disabled</span></td>
+					                    			<td class="text-center">
+					                    				<a href="#" class="btn btn-text"><i class="far fa-edit"></i></a>
+					                    				<a href="#" class="btn btn-text"><i class="far fa-trash-alt"></i></a>
+					                    			</td>
+					                    		</tr>
+					                    		<tr>
+					                    			<td>Visa chargeback ratio</td>
+					                    			<td>Visa CB ratio > 0.15%</td>
+					                    			<td>Dashboard</td>
+					                    			<td><span class="badge badge-pill bg-success">Active</span></td>
+					                    			<td class="text-center">
+					                    				<a href="#" class="btn btn-text"><i class="far fa-edit"></i></a>
+					                    				<a href="#" class="btn btn-text"><i class="far fa-trash-alt"></i></a>
+					                    			</td>
+					                    		</tr>
+					                    	</tbody>
+					                    </table>
+					                </div>
+					            </div>
+					            <hr>
+					            <div class="row mt-3">
+									<div class="col-md-12">
+					                    <h5 class="card-title"><strong>Daily Reports</strong></h5>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mt-2">
+					                    <label><i class="icon-coin-dollar pr-1"></i><strong>Daily chargeback report</strong></label>
+					                    <p>The daily chargeback report contains information about your disputes and dispute ratios for each merchant account on the given day in CSV format.</p>
+									</div>
+									<div class="col-md-6 mt-2">
+										<div class="form-group">
+											<label>Recipients email address</label>
+											<input type="text" class="form-control tokenfield" value="jason.m@freshflowers.com,sarah.p@freshflowers.com" data-fouc>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mt-2">
+					                    <label><i class="icon-shield2 pr-1"></i><strong>Daily prevention report</strong></label>
+					                    <p>The daily prevention report collects all prevention cases received for the specific day in a CSV format.</p>
+									</div>
+									<div class="col-md-6 mt-2">
+										<div class="form-group">
+											<label>Recipients email address</label>
+											<input type="text" class="form-control tokenfield" placeholder="" value="" data-fouc>
+										</div>
+									</div>
+								</div>
+
+							</div>
+			            </div>
+			            
+			        </div>
+			    </div>
+			    <!-- end notrifications drawer -->
+
+			    <!-- // End Drawers -->
+
+
+	
+
+</body>
+</html>

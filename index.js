@@ -3,8 +3,7 @@ let currentUser = null;
 userbase.init({appId: 'a72bec01-3177-442a-b8c9-2d7bd5f803fa'}).then(({user}) => {
   currentUser = user;
 
-  console.log(currentUser);
-  if (!currentUser && window.location.href.includes('app/')) {
+  if (!currentUser && window.location.href.includes('/app/')) {
     window.location.href = window.location.href.includes('file://')
       ? 'C:/Users/Max%20Baun/Projects/MidigatorPreview/index.html'
       : 'https://preview.midigator.com/';

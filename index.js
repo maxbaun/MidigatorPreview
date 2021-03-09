@@ -6,7 +6,7 @@ userbase.init({appId: 'a72bec01-3177-442a-b8c9-2d7bd5f803fa'}).then(({user}) => 
   if (!currentUser && window.location.href.includes('/app/')) {
     window.location.href = window.location.href.includes('file://')
       ? 'C:/Users/Max%20Baun/Projects/MidigatorPreview/index.html'
-      : 'https://preview.midigator.com/';
+      : window.location.origin;
   }
 });
 
@@ -176,7 +176,7 @@ class FormSignup {
         username: email,
         password: password,
         profile: {
-          lastLogin: new Date()
+          lastLogin: new Date().toString()
         }
       })
       .then(user => {

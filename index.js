@@ -1,6 +1,6 @@
 let currentUser = null;
 
-userbase.init({appId: 'a72bec01-3177-442a-b8c9-2d7bd5f803fa'}).then(({user}) => {
+userbase.init({appId: 'e31bd810-7c0c-46ba-af90-0005015c2655'}).then(({user}) => {
   currentUser = user;
 
   if (!currentUser && window.location.href.includes('/app/')) {

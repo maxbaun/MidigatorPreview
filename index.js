@@ -180,7 +180,19 @@ class FormSignup {
         }
       })
       .then(user => {
-        window.location = 'app/index.html';
+        fetch('https://hooks.zapier.com/hooks/catch/1780841/o73hnsg/', {
+          body: JSON.stringify({
+            email
+          }),
+          method: 'post'
+        })
+          .then(res => {
+            console.log(res);
+            return res.json();
+          })
+          .then(() => {
+            window.location = 'app/index.html';
+          });
       })
       .catch(err => {
         this.form.setError(err);
